@@ -1,0 +1,82 @@
+[
+  {
+    "question": "employees 테이블의 hire_date 컬럼에 인덱스가 걸려 있다면 다음 쿼리는 인덱스를 사용할 수 있다.\nSELECT * FROM employees WHERE YEAR(hire_date) > 2005;",
+    "choices": ["O", "X"],
+    "correct": "O",
+    "explanation": "함수를 사용해서 컬럼의 원래 값을 변경하면 인덱스를 적용할 수 없다. 인덱스를 사용하고 싶다면 다음과 같이 쿼리를 변경할 수 있다.\nSELECT * FROM employees WHERE hire_date > '2005-12-31';",
+    "sources": [],
+    "tags": ["DB"]
+  },
+  {
+    "question": "B-Tree 인덱스의 성능에 영향을 주는 요소에는 \"인덱스 키 값의 크기\", \"B-Tree의 깊이\", \"OOOOO\", \"읽어야 하는 레코드 수\" 등이 있다.\n힌트 : OOOOO는 특정 데이터 집합에서 유니크한 값의 수를 말한다. 중복된 값이 많으면 필요 없는 값을 읽어야 하는 게 많아지기 때문에 OOOOO가 높을수록 인덱스 성능이 좋다",
+    "choices": [],
+    "correct": "카디널리티(Cardinality)",
+    "explanation": "",
+    "sources": [],
+    "tags": ["DB"]
+  },
+  {
+    "question": "HTTP/2가 가지는 multiplexing의 특성은 클라이언트 측에서 요청을 보냈을 때, 관련된 리소스를 함께 보낼 수 있는 기능이다.",
+    "choices": ["O", "X"],
+    "correct": "X",
+    "explanation": "multiplexing은 한 커넥션에 대해서 패킷에 순서를 매겨 여러 요청을 보내게 만들어, 요청을 순서대로 받을 필요가 없게 만드는 걸 말한다. 위에서 말한 예시는 Server push의 특성이다.",
+    "sources": [],
+    "tags": ["Network"]
+  },
+  {
+    "question": "Java의 메모리 영역 중 스택 영역에는 지역변수와 매개변수 데이터 값이 저장되며, 스택 영역은 여러 스레드 간 공유할 수 있다.",
+    "choices": ["O", "X"],
+    "correct": "X",
+    "explanation": "스택 영역은 메서드가 실행될 때 할당되고 메서드 종료시 반환되는 영역이다. 스레드들 간 공유할 수 없다.",
+    "sources": [],
+    "tags": ["Java"]
+  },
+  {
+    "question": "Java의 char는 유니코드 형식의 정수를 저장하며, 기본적으로 UTF-16 인코딩을 사용한다. 따라서 2byte인 한글을 char 타입에 저장할 수 있다. UTF-16 인코딩의 경우 2~4byte 크기의 글자를 저장하기 때문에 2byte가 넘는 글자를 저장할 경우, Surrogate Pair를 사용해 해결한다.",
+    "choices": ["O", "X"],
+    "correct": "O",
+    "explanation": "",
+    "sources": [],
+    "tags": ["Java"]
+  },
+  {
+    "question": "OO란 CPU가 한 번에 처리 가능한 데이터의 크기를 말합니다. 예를 들어 32 bit 컴퓨터(x86)는 OO의 크기가 32bit, 64 bit 컴퓨터(x64)는 OO의 크기가 64bit입니다.",
+    "choices": [],
+    "correct": "워드(Word)",
+    "explanation": "",
+    "sources": [],
+    "tags": ["CS"]
+  },
+  {
+    "question": "hash collosion을 다루는 방법의 대표적인 예시로는 Open Addressing 방식과 Separate Chaining 방식이 있습니다. Java의 HashMap은 OOOO 방식을 채택하고 있고, 이 방법은 hash collision 발생시 충돌된 버켓은 linked list로 값을 채워 넣습니다\n각 빈칸에 알맞은 키워드를 넣으세요",
+    "choices": [],
+    "correct": "Separate Chaining",
+    "explanation": "",
+    "sources": [],
+    "tags": ["DS", "Java"]
+  },
+  {
+    "question": "CPU 내부 구성요소로는 레지스터, ALU, 제어장치가 존재합니다. OOOO는 연산할 수 있는 값들을 임시 저장하는 역할, OOOO는 연산하는 역할, OOOO는 명령어를 해독하고 제어 신호를 보내는 역할을 합니다.",
+    "choices": ["레지스터", "ALU", "제어장치"],
+    "correct": "",
+    "explanation": "",
+    "sources": [],
+    "tags": ["CS"]
+  },
+  {
+    "question": "Java 21에 등장한 OOOO는 경량 스레드라고도 불리우며, 작업하는 스레드에서 Blocking이 발생하면 내부적으로 다른 OOOO를 호출해 작업하도록 만들어 리소스 낭비를 줄이도록 합니다.",
+    "choices": [],
+    "correct": "가상스레드(Virtual thread)",
+    "explanation": "",
+    "sources": [],
+    "tags": ["Java"]
+  },
+  {
+    "question": "OOOO는 이벤트 기반 병행성을 해결하기 위한 고전적인 방법입니다. 싱글 스레드 환경에서 이벤트가 발생하면 각 이벤트에 맞는 이벤트 핸들러를 수행시킵니다. 이벤트 기반의 싱글 스레드 환경은 동시성 문제가 발생하지 않아 락이 필요 없고, 스케줄링도 제어할 수 있다는 장점을 가지나, 블로킹되는 것에 취약해 비동기 요청으로 이를 해결합니다.",
+    "choices": [],
+    "correct": "이벤트루프(Eventloop)",
+    "explanation": "",
+    "sources": [],
+    "tags": ["OS"]
+  }
+]
