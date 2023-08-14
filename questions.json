@@ -58,7 +58,7 @@
   {
     "question": "CPU 내부 구성요소로는 레지스터, ALU, 제어장치가 존재합니다. OOOO는 연산할 수 있는 값들을 임시 저장하는 역할, OOOO는 연산하는 역할, OOOO는 명령어를 해독하고 제어 신호를 보내는 역할을 합니다.",
     "choices": ["레지스터", "ALU", "제어장치"],
-    "correct": "",
+    "correct": "레지스터,ALU,제어장치",
     "explanation": "",
     "sources": [],
     "tags": ["CS"]

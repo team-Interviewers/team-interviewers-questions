@@ -29,11 +29,11 @@ def validate_question_format(index, data):
 
     """정답 str"""
     if not isinstance(data[CORRECT], str) or data[CORRECT] == "":
-        value_error(index, CHOICES)
+        value_error(index, CORRECT)
 
     """문제 답에 대한 해설 str"""
     if not isinstance(data[EXPLANATION], str):
-        value_error(index, CHOICES)
+        value_error(index, EXPLANATION)
 
     """출처 str[]"""
     if not isinstance(data[SOURCES], list):
