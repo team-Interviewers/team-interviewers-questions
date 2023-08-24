@@ -78,5 +78,45 @@
     "explanation": "",
     "sources": [],
     "tags": ["OS"]
+  },
+  {
+    "question": "참조 지역성은 일정 기간 동안 특정 스토리지에 자주 액세스되는 특성을 의미합니다. 참조 지역성의 종류 중 OOOO는 사용되었던 데이터의 인근 데이터가 액세스될 가능성이 높다는 특성을 의미합니다. CPU 캐시는 이러한 특성을 이용해 메인 메모리에서 데이터를 읽을 때 주변 데이터를 함께 읽습니다.",
+    "choices": ["공간 지역성", "시간 지역성", "순차 지역성"],
+    "correct": "공간 지역성",
+    "explanation": "",
+    "sources": [],
+    "tags": ["OS"]
+  },
+  {
+    "question": "다음 동기화 기법들에 대한 설명 중 틀린 것에 대하여 고르세요.",
+    "choices": ["semaphore는 busy waiting의 특성을 가지기 때문에 CPU 낭비가 크다", "mutex는 단일 자원에 대한 잠금을 지원한다", "semaphore는 여러 공유 자원에 대한 잠금을 지원한다", "race condition이란 여러 프로세스가 critical section의 코드를 실행하는 경우를 말한다"],
+    "correct": "semaphore는 busy waiting의 특성을 가지기 때문에 CPU 낭비가 크다",
+    "explanation": "busy waiting의 특성을 가지는 것은 mutex 방식이며, spin lock이라고도 부릅니다. semaphore는 busy waiting하지 않고 waiting queue에 넣어 작업이 완료되길 기다립니다.",
+    "sources": ["혼자 공부하는 컴퓨터구조+운영체제"],
+    "tags": ["OS"]
+  },
+  {
+    "question": "OOOO란 현재 메모리에 페이지가 존재하지 않아 페이지 스왑 영역에서 메모리로 page-in해야 하는 상황을 말합니다.",
+    "choices": ["look-aside", "page fault", "page table", "TLB"],
+    "correct": "page fault",
+    "explanation": "1. look-aside는 원하는 데이터를 캐시에서 우선 검색하고 원하는 데이터가 없으면 저장소에서 검색하는 캐시 조회 전략을 의미한다. 3. page table은 프로세스의 페이지 번호와 메인 메모리의 프레임을 매핑해주는 역할을 한다. 모든 프로세스가 page table을 가진다. 4. TLB는 Translation Lookaside Buffer로 메인 메모리에 존재하는 page table를 캐싱하는 CPU 캐시의 일종이다.",
+    "sources": ["혼자 공부하는 컴퓨터구조+운영체제"],
+    "tags": ["OS"]
+  },
+  {
+    "question": "다음 중 가상 메모리에 대한 내용에 대해 틀린 내용을 선택해 주세요",
+    "choices": ["가상 메모리는 프로그램을 작은 단위(페이지, 세그먼트)로 쪼개 메모리에 필요한 만큼만 적재할 수 있도록 하는 기법입니다.", "실제 메모리보다 더 큰 프로그램을 메모리에 적재할 수 있습니다.", "내부 단편화 문제를 해결합니다.", "페이지가 프로그램을 잘게 자른 것이라면, 프레임은 메모리를 잘게 자른 단위입니다."],
+    "correct": "내부 단편화 문제를 해결합니다.",
+    "explanation": "가상 메모리가 해결하는 문제는 내부 단편화가 아닌 외부 단편화입니다. 외부 단편화는 프로세스들 사이에 빈 메모리 공간이 생기는 것을 의미하며, 내부 단편화는 페이지 공간 내에 빈 공간이 생기는 것을 의미합니다.",
+    "sources": ["혼자 공부하는 컴퓨터구조+운영체제"],
+    "tags": ["OS"]
+  },
+  {
+    "question": "다음 중 PCB(Process Control Block)에 대한 설명중 틀린 것에 대해 선택해 주세요",
+    "choices": ["PCB는 프로세스 상태, PC(Program Counter), CPU 레지스터들의 값 등의 정보를 저장합니다.", "fork() 수행시 부모 프로세스의 PCB를 모두 복사해 자식 프로세스의 PCB를 만듭니다.", "PCB가 필요한 이유는 멀티프로세싱과 Context Switching 때문이라고 볼 수 있습니다.", "PCB는 Process Table이라는 자료구조에 의해 관리됩니다."],
+    "correct": "fork() 수행시 부모 프로세스의 PCB를 모두 복사해 자식 프로세스의 PCB를 만듭니다.",
+    "explanation": "fork() 수행시 부모 프로세스의 PCB를 복사하는 것은 맞지만, PID와 PPID 등 고유한 영역은 새롭게 생성됩니다",
+    "sources": [],
+    "tags": ["OS"]
   }
 ]
