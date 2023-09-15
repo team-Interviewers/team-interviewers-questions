@@ -2,14 +2,14 @@
   {
     "question": "employees 테이블의 hire_date 컬럼에 인덱스가 걸려 있다면 다음 쿼리는 인덱스를 사용할 수 있다.\nSELECT * FROM employees WHERE YEAR(hire_date) > 2005;",
     "choices": ["O", "X"],
-    "correct": "O",
+    "correct": "X",
     "explanation": "함수를 사용해서 컬럼의 원래 값을 변경하면 인덱스를 적용할 수 없다. 인덱스를 사용하고 싶다면 다음과 같이 쿼리를 변경할 수 있다.\nSELECT * FROM employees WHERE hire_date > '2005-12-31';",
     "sources": [],
     "tags": ["DB"]
   },
   {
     "question": "B-Tree 인덱스의 성능에 영향을 주는 요소에는 \"인덱스 키 값의 크기\", \"B-Tree의 깊이\", \"OOOOO\", \"읽어야 하는 레코드 수\" 등이 있다.\n힌트 : OOOOO는 특정 데이터 집합에서 유니크한 값의 수를 말한다. 중복된 값이 많으면 필요 없는 값을 읽어야 하는 게 많아지기 때문에 OOOOO가 높을수록 인덱스 성능이 좋다",
-    "choices": [],
+    "choices": ["카디널리티(Cardinality)", "MVCC", "프로시저(Procedure)", "파티셔닝(Partitioning)"],
     "correct": "카디널리티(Cardinality)",
     "explanation": "",
     "sources": [],
@@ -41,7 +41,7 @@
   },
   {
     "question": "OO란 CPU가 한 번에 처리 가능한 데이터의 크기를 말합니다. 예를 들어 32 bit 컴퓨터(x86)는 OO의 크기가 32bit, 64 bit 컴퓨터(x64)는 OO의 크기가 64bit입니다.",
-    "choices": [],
+    "choices": ["워드(Word)", "블록(Block)", "세그먼트(Segment)", "페이지(Page)"],
     "correct": "워드(Word)",
     "explanation": "",
     "sources": [],
@@ -49,31 +49,31 @@
   },
   {
     "question": "hash collosion을 다루는 방법의 대표적인 예시로는 Open Addressing 방식과 Separate Chaining 방식이 있습니다. Java의 HashMap은 OOOO 방식을 채택하고 있고, 이 방법은 hash collision 발생시 충돌된 버켓은 linked list로 값을 채워 넣습니다\n각 빈칸에 알맞은 키워드를 넣으세요",
-    "choices": [],
+    "choices": ["Separate Chaining", "Open Addressing"],
     "correct": "Separate Chaining",
     "explanation": "",
     "sources": [],
     "tags": ["DS", "Java"]
   },
   {
-    "question": "CPU 내부 구성요소로는 레지스터, ALU, 제어장치가 존재합니다. OOOO는 연산할 수 있는 값들을 임시 저장하는 역할, OOOO는 연산하는 역할, OOOO는 명령어를 해독하고 제어 신호를 보내는 역할을 합니다.",
+    "question": "CPU 내부 구성요소로는 레지스터, ALU, 제어장치가 존재합니다. 그중 OOOO는 연산할 수 있는 값들을 임시 저장하는 역할을 합니다.",
     "choices": ["레지스터", "ALU", "제어장치"],
-    "correct": "레지스터,ALU,제어장치",
+    "correct": "레지스터",
     "explanation": "",
     "sources": [],
     "tags": ["CS"]
   },
   {
     "question": "Java 21에 등장한 OOOO는 경량 스레드라고도 불리우며, 작업하는 스레드에서 Blocking이 발생하면 내부적으로 다른 OOOO를 호출해 작업하도록 만들어 리소스 낭비를 줄이도록 합니다.",
-    "choices": [],
+    "choices": ["가상스레드(Virtual thread)", "가상 메모리(Virtual Memory)", "코루틴(Coroutine)"],
     "correct": "가상스레드(Virtual thread)",
     "explanation": "",
     "sources": [],
     "tags": ["Java"]
   },
   {
-    "question": "OOOO는 이벤트 기반 병행성을 해결하기 위한 고전적인 방법입니다. 싱글 스레드 환경에서 이벤트가 발생하면 각 이벤트에 맞는 이벤트 핸들러를 수행시킵니다. 이벤트 기반의 싱글 스레드 환경은 동시성 문제가 발생하지 않아 락이 필요 없고, 스케줄링도 제어할 수 있다는 장점을 가지나, 블로킹되는 것에 취약해 비동기 요청으로 이를 해결합니다.",
-    "choices": [],
+    "question": "OOOO는 이벤트 기반 병행성을 해결하기 위한 방법입니다. 싱글 스레드 환경에서 이벤트가 발생하면 각 이벤트에 맞는 이벤트 핸들러를 수행시킵니다. 이벤트 기반의 싱글 스레드 환경은 동시성 문제가 발생하지 않아 락이 필요 없고, 스케줄링도 제어할 수 있다는 장점을 가지나, 블로킹되는 것에 취약해 비동기 요청으로 이를 해결합니다.",
+    "choices": ["MVC(Model-View-Controller)", "이벤트루프(Eventloop)", "MSA(Microservices Architecture)", "메세지큐(Message Queue)"],
     "correct": "이벤트루프(Eventloop)",
     "explanation": "",
     "sources": [],
@@ -117,6 +117,46 @@
     "correct": "fork() 수행시 부모 프로세스의 PCB를 모두 복사해 자식 프로세스의 PCB를 만듭니다.",
     "explanation": "fork() 수행시 부모 프로세스의 PCB를 복사하는 것은 맞지만, PID와 PPID 등 고유한 영역은 새롭게 생성됩니다",
     "sources": [],
+    "tags": ["OS"]
+  },
+  {
+    "question": "다음 중 트랜잭션의 특징에 대한 설명중 틀린 것을 고르세요.",
+    "choices": ["원자성(Atomicity) : 트랜잭션 안의 모든 작업은 전부 성공하거나 전부 실패해야 한다.", "일관성(Consistency) : 트랜잭션 이후에도 제약 조건을 유지해야 한다.", "격리성(Isolation) : 모든 트랜잭션은 서로 영향을 주지 않아야 한다.", "지속성(Durability) : 트랜잭션 이후에도 DB 상태는 유지되어야 한다."],
+    "correct": "지속성(Durability) : 트랜잭션 이후에도 DB 상태는 유지되어야 한다.",
+    "explanation": "지속성은 트랜잭션이 성공하면 DB에 반영되어야 함을 의미합니다. 이는 중간에 시스템 오류로 종료되더라도 반영되어야 합니다. 키워드 : binlog",
+    "sources": [],
+    "tags": ["DB"]
+  },
+  {
+    "question": "다음 중 트랜잭션 격리 수준에 대한 설명으로 틀린 것을 고르세요.",
+    "choices": ["READ UNCOMMITED : 커밋되지 않은 데이터라도 읽을 수 있는 수준", "READ COMMITED : 커밋된 데이터만 읽을 수 있는 수준. Non-Repeatable Read 문제가 발생한다.", "REPEATABLE READ : 같은 트랜잭션 내에서 같은 레코드를 조회했을 때 변경하지 않았다면 멱등성을 보장받을 수 있는 수준. Phantom Read 문제가 발생한다.", "SERIALIZABLE : 트랜잭션을 순차적으로 진행시킨다. MVCC를 사용해서 Lock 대기를 줄일 수 있다."],
+    "correct": "SERIALIZABLE : 트랜잭션을 순차적으로 진행시킨다. MVCC를 사용해서 Lock 대기를 줄일 수 있다.",
+    "explanation": "SERIALIZABLE 단계는 모든 트랜잭션들에 대해 lock을 걸기 때문에 MVCC를 사용하지 않는다.",
+    "sources": [],
+    "tags": ["DB"]
+  },
+  {
+    "question": "다음 쿼리들에 대한 설명 중 틀린 것을 고르세요.",
+    "choices": ["DELETE : 원하는 데이터를 지우고, 디스크에서도 지운다. 삭제 명령을 되돌릴 수 있다.", "TRUNCATE : 스키마를 제외한 모든 데이터를 지우고, 디스크에서도 지우며 인덱스 등도 삭제한다. 되돌릴 수 없다.", "DROP : 스키마, 데이터, 객체 등 모든 것을 삭제한다. 되돌릴 수 없다."],
+    "correct": "DELETE : 원하는 데이터를 지우고, 디스크에서도 지운다. 삭제 명령을 되돌릴 수 있다.",
+    "explanation": "DELETE 명령어는 원하는 데이터를 지우지만 디스크에서 지우지는 않는다. 따라서 테이블 용량이 줄어들진 않는다.",
+    "sources": ["https://wikidocs.net/4021"],
+    "tags": ["DB"]
+  },
+  {
+    "question": "다음 중 RAID(Redundant Array Of Independent Disks)에 대한 설명 중 틀린 것을 고르세요.",
+    "choices": ["RAID는 데이터의 안정성 혹은 성능을 위해 여러 HDD나 SSD를 하나의 장치처럼 사용하는 기술을 말한다.", "RAID 0는 데이터를 그대로 복사하는 디스크를 1:1로 둔다.", "RAID 4는 parity bit용 disk를 두어 오류 검출에 사용한다.", "RAID 5는 parity bit를 한 disk가 아닌 여러 disk에 분산해 저장한다."],
+    "correct": "RAID 0는 데이터를 그대로 복사하는 디스크를 1:1로 둔다.",
+    "explanation": "데이터를 그대로 복사하는 디스크를 1:1로 두는 것은 RAID 1에 해당한다. RAID 0은 데이터를 한 곳이 아닌 여러 곳에 나누어 저장한다.",
+    "sources": ["혼자 공부하는 컴퓨터구조+운영체제"],
+    "tags": ["OS"]
+  },
+  {
+    "question": "다음 중 레지스터 종류에 대한 설명 중 틀린 것을 고르세요.",
+    "choices": ["MBR(Memory Buffer Register) : 메모리와 상호작용하는 레지스터 ", "IR(Instruction Register) : 실행할 명령어를 메모리에서 직접 읽어와 저장하는 레지스터", "인터럽트 : ", "PC(Program Counter) : 다음 실행할 명령어에 대한 메모리 주소를 저장하는 레지스터", "MAR(Memory Address Register) : CPU가 읽고자 하는 명령어의 메모리 주소 값을 저장하는 레지스터."],
+    "correct": "IR(Instruction Register) : 실행할 명령어를 메모리에서 직접 읽어와 저장하는 레지스터",
+    "explanation": "메모리에서 읽은 데이터는 MBR에 저장된 후에 IR로 이동한다. CPU에서 메모리를 읽는 흐름은 다음과 같다. 1. PC가 가진 주소를 IR로 옮긴다. 2. ALU에서 IR을 읽고 메모리에서 값을 읽는다. 3. 읽은 메모리를 MBR에 쓰고 PC 값을 증가시킨다. 4. MBR에 있는 값을 IR로 이동시킨다.",
+    "sources": ["혼자 공부하는 컴퓨터구조+운영체제"],
     "tags": ["OS"]
   }
 ]
