@@ -8,7 +8,7 @@
     "tags": ["DB"]
   },
   {
-    "question": "B-Tree 인덱스의 성능에 영향을 주는 요소에는 \"인덱스 키 값의 크기\", \"B-Tree의 깊이\", \"OOOOO\", \"읽어야 하는 레코드 수\" 등이 있다.\n힌트 : OOOOO는 특정 데이터 집합에서 유니크한 값의 수를 말한다. 중복된 값이 많으면 필요 없는 값을 읽어야 하는 게 많아지기 때문에 OOOOO가 높을수록 인덱스 성능이 좋다",
+    "question": "B-Tree 인덱스의 성능에 영향을 주는 요소에는 \"인덱스 키 값의 크기\", \"B-Tree의 높이\", \"OOOOO\", \"읽어야 하는 레코드 수\" 등이 있다.\n힌트 : OOOOO는 특정 데이터 집합에서 유니크한 값의 수를 말한다. 중복된 값이 많으면 필요 없는 값을 읽어야 하는 게 많아지기 때문에 OOOOO가 높을수록 인덱스 성능이 좋다",
     "choices": ["카디널리티(Cardinality)", "MVCC", "프로시저(Procedure)", "파티셔닝(Partitioning)"],
     "correct": "카디널리티(Cardinality)",
     "explanation": "",
@@ -16,10 +16,10 @@
     "tags": ["DB"]
   },
   {
-    "question": "HTTP/2가 가지는 multiplexing의 특성은 클라이언트 측에서 요청을 보냈을 때, 관련된 리소스를 함께 보낼 수 있는 기능이다.",
+    "question": "HTTP/2가 가지는 Multiplexing의 특성은 클라이언트 측에서 요청을 보냈을 때, 관련된 리소스를 함께 보낼 수 있는 기능이다.",
     "choices": ["O", "X"],
     "correct": "X",
-    "explanation": "multiplexing은 한 커넥션에 대해서 패킷에 순서를 매겨 여러 요청을 보내게 만들어, 요청을 순서대로 받을 필요가 없게 만드는 걸 말한다. 위에서 말한 예시는 Server push의 특성이다.",
+    "explanation": "Multiplexing은 한 커넥션에 대해서 패킷에 순서를 매겨 여러 요청을 보내게 만들어, 요청을 순서대로 받을 필요가 없게 만드는 걸 말한다. 위에서 말한 예시는 Server push의 특성이다.",
     "sources": [],
     "tags": ["Network"]
   },
@@ -48,7 +48,7 @@
     "tags": ["CS"]
   },
   {
-    "question": "hash collosion을 다루는 방법의 대표적인 예시로는 Open Addressing 방식과 Separate Chaining 방식이 있습니다. Java의 HashMap은 OOOO 방식을 채택하고 있고, 이 방법은 hash collision 발생시 충돌된 버켓은 linked list로 값을 채워 넣습니다\n각 빈칸에 알맞은 키워드를 넣으세요",
+    "question": "Hash Collosion을 다루는 방법의 대표적인 예시로는 Open Addressing 방식과 Separate Chaining 방식이 있습니다. Java의 HashMap은 OOOO 방식을 채택하고 있고, 이 방법은 Hash Collision 발생시 충돌된 버켓은 Linked List로 값을 채워 넣습니다\n각 빈칸에 알맞은 키워드를 넣으세요",
     "choices": ["Separate Chaining", "Open Addressing"],
     "correct": "Separate Chaining",
     "explanation": "",
@@ -65,16 +65,16 @@
   },
   {
     "question": "Java 21에 등장한 OOOO는 경량 스레드라고도 불리우며, 작업하는 스레드에서 Blocking이 발생하면 내부적으로 다른 OOOO를 호출해 작업하도록 만들어 리소스 낭비를 줄이도록 합니다.",
-    "choices": ["가상스레드(Virtual thread)", "가상 메모리(Virtual Memory)", "코루틴(Coroutine)"],
-    "correct": "가상스레드(Virtual thread)",
+    "choices": ["가상스레드(Virtual Thread)", "가상 메모리(Virtual Memory)", "코루틴(Coroutine)"],
+    "correct": "가상스레드(Virtual Thread)",
     "explanation": "",
     "sources": [],
     "tags": ["Java"]
   },
   {
     "question": "OOOO는 이벤트 기반 병행성을 해결하기 위한 방법입니다. 싱글 스레드 환경에서 이벤트가 발생하면 각 이벤트에 맞는 이벤트 핸들러를 수행시킵니다. 이벤트 기반의 싱글 스레드 환경은 동시성 문제가 발생하지 않아 락이 필요 없고, 스케줄링도 제어할 수 있다는 장점을 가지나, 블로킹되는 것에 취약해 비동기 요청으로 이를 해결합니다.",
-    "choices": ["MVC(Model-View-Controller)", "이벤트루프(Eventloop)", "MSA(Microservices Architecture)", "메세지큐(Message Queue)"],
-    "correct": "이벤트루프(Eventloop)",
+    "choices": ["MVC(Model-View-Controller)", "이벤트 루프(Event Loop)", "MSA(Microservices Architecture)", "메세지큐(Message Queue)"],
+    "correct": "이벤트 루프(Event Loop)",
     "explanation": "",
     "sources": [],
     "tags": ["OS"]
@@ -89,17 +89,17 @@
   },
   {
     "question": "다음 동기화 기법들에 대한 설명 중 틀린 것에 대하여 고르세요.",
-    "choices": ["semaphore는 busy waiting의 특성을 가지기 때문에 CPU 낭비가 크다", "mutex는 단일 자원에 대한 잠금을 지원한다", "semaphore는 여러 공유 자원에 대한 잠금을 지원한다", "race condition이란 여러 프로세스가 critical section의 코드를 실행하는 경우를 말한다"],
-    "correct": "semaphore는 busy waiting의 특성을 가지기 때문에 CPU 낭비가 크다",
-    "explanation": "busy waiting의 특성을 가지는 것은 mutex 방식이며, spin lock이라고도 부릅니다. semaphore는 busy waiting하지 않고 waiting queue에 넣어 작업이 완료되길 기다립니다.",
+    "choices": ["Semaphore는 Busy Waiting의 특성을 가지기 때문에 CPU 낭비가 크다", "Mutex는 단일 자원에 대한 잠금을 지원한다", "Semaphore는 여러 공유 자원에 대한 잠금을 지원한다", "Race Condition이란 여러 프로세스가 Critical Section의 코드를 실행하는 경우를 말한다"],
+    "correct": "Semaphore는 Busy Waiting의 특성을 가지기 때문에 CPU 낭비가 크다",
+    "explanation": "Busy Waiting의 특성을 가지는 것은 Mutex 방식이며, Spin Lock이라고도 부릅니다. Semaphore는 Busy Waiting하지 않고 Waiting Queue에 넣어 작업이 완료되길 기다립니다.",
     "sources": ["혼자 공부하는 컴퓨터구조+운영체제"],
     "tags": ["OS"]
   },
   {
     "question": "OOOO란 현재 메모리에 페이지가 존재하지 않아 페이지 스왑 영역에서 메모리로 page-in해야 하는 상황을 말합니다.",
-    "choices": ["look-aside", "page fault", "page table", "TLB"],
-    "correct": "page fault",
-    "explanation": "1. look-aside는 원하는 데이터를 캐시에서 우선 검색하고 원하는 데이터가 없으면 저장소에서 검색하는 캐시 조회 전략을 의미한다. 3. page table은 프로세스의 페이지 번호와 메인 메모리의 프레임을 매핑해주는 역할을 한다. 모든 프로세스가 page table을 가진다. 4. TLB는 Translation Lookaside Buffer로 메인 메모리에 존재하는 page table를 캐싱하는 CPU 캐시의 일종이다.",
+    "choices": ["Look-aside", "Page Fault", "Page Table", "TLB"],
+    "correct": "Page Fault",
+    "explanation": "1. Look-aside는 원하는 데이터를 캐시에서 우선 검색하고 원하는 데이터가 없으면 저장소에서 검색하는 캐시 조회 전략을 의미한다. 3. page table은 프로세스의 페이지 번호와 메인 메모리의 프레임을 매핑해주는 역할을 한다. 모든 프로세스가 page table을 가진다. 4. TLB는 Translation Lookaside Buffer로 메인 메모리에 존재하는 page table를 캐싱하는 CPU 캐시의 일종이다.",
     "sources": ["혼자 공부하는 컴퓨터구조+운영체제"],
     "tags": ["OS"]
   },
@@ -112,7 +112,7 @@
     "tags": ["OS"]
   },
   {
-    "question": "다음 중 PCB(Process Control Block)에 대한 설명중 틀린 것에 대해 선택해 주세요",
+    "question": "다음 중 PCB(Process Control Block)에 대한 설명 중 틀린 것에 대해 선택해 주세요",
     "choices": ["PCB는 프로세스 상태, PC(Program Counter), CPU 레지스터들의 값 등의 정보를 저장합니다.", "fork() 수행시 부모 프로세스의 PCB를 모두 복사해 자식 프로세스의 PCB를 만듭니다.", "PCB가 필요한 이유는 멀티프로세싱과 Context Switching 때문이라고 볼 수 있습니다.", "PCB는 Process Table이라는 자료구조에 의해 관리됩니다."],
     "correct": "fork() 수행시 부모 프로세스의 PCB를 모두 복사해 자식 프로세스의 PCB를 만듭니다.",
     "explanation": "fork() 수행시 부모 프로세스의 PCB를 복사하는 것은 맞지만, PID와 PPID 등 고유한 영역은 새롭게 생성됩니다",
@@ -120,7 +120,7 @@
     "tags": ["OS"]
   },
   {
-    "question": "다음 중 트랜잭션의 특징에 대한 설명중 틀린 것을 고르세요.",
+    "question": "다음 중 트랜잭션의 특징에 대한 설명 중 틀린 것을 고르세요.",
     "choices": ["원자성(Atomicity) : 트랜잭션 안의 모든 작업은 전부 성공하거나 전부 실패해야 한다.", "일관성(Consistency) : 트랜잭션 이후에도 제약 조건을 유지해야 한다.", "격리성(Isolation) : 모든 트랜잭션은 서로 영향을 주지 않아야 한다.", "지속성(Durability) : 트랜잭션 이후에도 DB 상태는 유지되어야 한다."],
     "correct": "지속성(Durability) : 트랜잭션 이후에도 DB 상태는 유지되어야 한다.",
     "explanation": "지속성은 트랜잭션이 성공하면 DB에 반영되어야 함을 의미합니다. 이는 중간에 시스템 오류로 종료되더라도 반영되어야 합니다. 키워드 : binlog",
@@ -129,9 +129,9 @@
   },
   {
     "question": "다음 중 트랜잭션 격리 수준에 대한 설명으로 틀린 것을 고르세요.",
-    "choices": ["READ UNCOMMITED : 커밋되지 않은 데이터라도 읽을 수 있는 수준", "READ COMMITED : 커밋된 데이터만 읽을 수 있는 수준. Non-Repeatable Read 문제가 발생한다.", "REPEATABLE READ : 같은 트랜잭션 내에서 같은 레코드를 조회했을 때 변경하지 않았다면 멱등성을 보장받을 수 있는 수준. Phantom Read 문제가 발생한다.", "SERIALIZABLE : 트랜잭션을 순차적으로 진행시킨다. MVCC를 사용해서 Lock 대기를 줄일 수 있다."],
-    "correct": "SERIALIZABLE : 트랜잭션을 순차적으로 진행시킨다. MVCC를 사용해서 Lock 대기를 줄일 수 있다.",
-    "explanation": "SERIALIZABLE 단계는 모든 트랜잭션들에 대해 lock을 걸기 때문에 MVCC를 사용하지 않는다.",
+    "choices": ["READ UNCOMMITED : 커밋되지 않은 데이터라도 읽을 수 있는 수준", "READ COMMITED : 커밋된 데이터만 읽을 수 있는 수준. Non-Repeatable Read 문제가 발생한다.", "REPEATABLE READ : 같은 트랜잭션 내에서 같은 레코드를 조회했을 때 변경하지 않았다면 멱등성을 보장받을 수 있는 수준. Phantom Read 문제가 발생한다.", "SERIALIZABLE : 트랜잭션이 시작되면 완료될 때까지 외부의 읽기 접근을 차단(Lock)하여 일관된 읽기를 보장한다. MVCC를 사용해서 Lock 대기를 줄일 수 있다."],
+    "correct": "SERIALIZABLE : 트랜잭션이 시작되면 완료될 때까지 외부의 읽기 접근을 차단(Lock)하여 일관된 읽기를 보장한다. MVCC를 사용해서 Lock 대기를 줄일 수 있다.",
+    "explanation": "SERIALIZABLE 단계는 모든 트랜잭션들에 대해 Lock을 걸기 때문에 MVCC를 사용하지 않는다.",
     "sources": [],
     "tags": ["DB"]
   },
